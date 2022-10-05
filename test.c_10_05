@@ -1,0 +1,92 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+//练习
+//求第n个斐波那契数
+#include<stdio.h>
+int fib(int n)
+{
+    int a=1;
+    int b=1;
+    int c=0;
+    while(n>2)
+    {
+       c=a+b;
+       a=b;
+       b=c;//每求完一个斐波那契数就向后移动，减少了大量重复工作，提高效率
+       n--;//求n时动作执行次数为（n-1),当n<=2时，跳出循环
+    }
+    return c;
+}
+
+int main()
+{
+    int n=0;
+    int ret=0;
+    scanf("%d",&n);
+    ret=fib(n);
+    printf("%d",ret);
+    return 0;
+}
+
+//求n的阶乘
+/*int fac_1(int n)
+{
+    int ret=1;
+    int i=0;
+    for(i=1;i<=n;i++)
+    {
+       ret*=i;
+    }
+    return ret;
+}
+
+
+
+int main()
+{
+    int n=0;
+    int ret=0;
+    scanf("%d",&n);
+    ret=fac_1(n);
+    printf("%d",ret);
+    return 0;
+}*/
+
+//数组的冒泡排序（数组作为函数参数）
+void bubble_sort(int arr[],int sz)//冒泡排序函数排成升序
+{
+    int i=0;
+    for(i=0;i<sz-1;i++)//10个元素有9趟排序，下标为8
+    {
+      int flag=1;//判断数组是否已排好(排好的直接跳过循环)
+      int j=0;
+      for(j=0;j<sz-1-i;j++)//每一趟排序次数，可让循环及时停止
+      {
+         if(arr[j]>arr[j+1])
+         {
+            int tem=arr[j];
+            arr[j]=arr[j+1];
+            arr[j+1]=tem;
+            flag=0;
+         }
+         if(flag==1)
+         {
+            break;
+         }
+      }
+    }
+}
+
+int main()
+{
+    int arr[]={9,8,7,6,5,4,3,2,1,0};
+    int i=0;//i为下标
+    int sz=sizeof(arr)/sizeof(arr[0]);/*arr是数组，我们对数组arr进行传参，实际上传递过去的是
+      数组arr首元素的地址*/
+    bubble_sort(arr,sz);
+    for(i=0;i<sz;i++)
+   {
+      printf("%d",arr[i]);
+   }
+ return 0;
+}
+
