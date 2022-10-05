@@ -1,20 +1,20 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
-//¿¼ºËÌâ
-/*int main()
+//è€ƒæ ¸é¢˜
+int main()
 {
     char str[]="HELLO_WORLD!";
     printf("%d",sizeof(str));
     return 0;
-}*/
+}
 
-//charÓëintµÄ¹ØÏµ
-//charºÍint³ýÁËÓÐ´óÐ¡·¶Î§µÄ²îÒìÍâ£¬ÆäÊµÃ»ÓÐÇø±ð¡£
+//charä¸Žintçš„å…³ç³»
+//charå’Œinté™¤äº†æœ‰å¤§å°èŒƒå›´çš„å·®å¼‚å¤–ï¼Œå…¶å®žæ²¡æœ‰åŒºåˆ«ã€‚
 
-/*int main()
+int main()
 {
-    char char_zero='0';//°Ñc³õÊ¼»¯Îª×Ö·û0£¬ASCIIÂëÖµÎª48
-    int  int_zero=48; //°Ñc³õÊ¼»¯ÎªASCIIÂëÖµ48£¬Á½ÕßÏàÍ¬
+    char char_zero='0';//æŠŠcåˆå§‹åŒ–ä¸ºå­—ç¬¦0ï¼ŒASCIIç å€¼ä¸º48
+    int  int_zero=48; //æŠŠcåˆå§‹åŒ–ä¸ºASCIIç å€¼48ï¼Œä¸¤è€…ç›¸åŒ
     printf("%d\n",char_zero);
     if(char_zero==int_zero)
     {
@@ -22,10 +22,10 @@
     }
     else
     printf("false");
-}*/
+}
 
-//ÅÐ¶ÏÄê·Ýn(1997 <= n <= 2099)ÊÇ·ñÎªÈòÄê£¬ÐèÒªÂú×ãÒÔÏÂÌõ¼þÖÐµÄÈÎÒâÒ»¸ö£º
-/*int main()
+//åˆ¤æ–­å¹´ä»½n(1997 <= n <= 2099)æ˜¯å¦ä¸ºé—°å¹´ï¼Œéœ€è¦æ»¡è¶³ä»¥ä¸‹æ¡ä»¶ä¸­çš„ä»»æ„ä¸€ä¸ªï¼š
+int main()
 {
     int n;
     scanf("%d",&n);
@@ -33,28 +33,28 @@
     {
       if(n%4==0&&n%100!=0)
       {
-        printf("ÊÇÈòÄê");
+        printf("æ˜¯é—°å¹´");
       }
       else if(n%400==0)
       {
-        printf("ÊÇÈòÄê");
+        printf("æ˜¯é—°å¹´");
       }
       else
      {
-        printf("²»ÊÇÈòÄê");
+        printf("ä¸æ˜¯é—°å¹´");
      }
     
    }
    else
    {
-     printf("²»ÔÚ·¶Î§ÄÚ");
+     printf("ä¸åœ¨èŒƒå›´å†…");
    }
-}*/
+}
 
 
- //²âÊÔ¸³ÖµÔËËã·ûµÄ·µ»ØÖµ
-//½áÂÛ£º·µ»ØÖµÊÇ¶Ô¶ÔÏóµÄÒýÓÃ£¬¼´¸³ÖµºÅ×ó±ßµÄÖµ
-/*int main()
+ //æµ‹è¯•èµ‹å€¼è¿ç®—ç¬¦çš„è¿”å›žå€¼
+//ç»“è®ºï¼šè¿”å›žå€¼æ˜¯å¯¹å¯¹è±¡çš„å¼•ç”¨ï¼Œå³èµ‹å€¼å·å·¦è¾¹çš„å€¼
+int main()
 {
  
 	int a;
@@ -70,11 +70,11 @@
       printf("false\n"); 
   }
  return 0;
- }*/
+ }
 
- //1¡¢2¡¢3¡¢4ËÄ¸öÊý×Ö£¬ÄÜ×é³É¶àÉÙ¸ö»¥²»ÏàÍ¬ÇÒÎÞÖØ¸´Êý×ÖµÄÈýÎ»Êý£¿Çë°ÑËûÃÇprintf³öÀ´¡£
-//1234µÄÊý×Ö×éºÏ
-/*int main()
+ //1ã€2ã€3ã€4å››ä¸ªæ•°å­—ï¼Œèƒ½ç»„æˆå¤šå°‘ä¸ªäº’ä¸ç›¸åŒä¸”æ— é‡å¤æ•°å­—çš„ä¸‰ä½æ•°ï¼Ÿè¯·æŠŠä»–ä»¬printfå‡ºæ¥ã€‚
+//1234çš„æ•°å­—ç»„åˆ
+int main()
 {
     int a,b,c;
     int count=0;
@@ -94,11 +94,11 @@
     }
    printf("count=%d",count); 
    return 0;
-}*/
+}
 
-/*ÇóÒ»Ôª¶þ´Î·½³Ì£ºax2+bx+c=0ÔÚÊµÊýÓòµÄ¸ù¡£ÊäÈëÈý¸öÊµÊýa,b,c(float)µÄÖµ£¬ÇÒa²»µÈÓÚ0¡£
-  ×¢Òâ£¬·½³Ì¿ÉÄÜÓÐÁ½¸öÊµÊý¸ù¡¢Ò»¸öÊµÊý¸ù¡¢ÎÞÊµÊý½âÈýÖÖÇé¿ö¡£*/
-/*int main()
+/*æ±‚ä¸€å…ƒäºŒæ¬¡æ–¹ç¨‹ï¼šax2+bx+c=0åœ¨å®žæ•°åŸŸçš„æ ¹ã€‚è¾“å…¥ä¸‰ä¸ªå®žæ•°a,b,c(float)çš„å€¼ï¼Œä¸”aä¸ç­‰äºŽ0ã€‚
+  æ³¨æ„ï¼Œæ–¹ç¨‹å¯èƒ½æœ‰ä¸¤ä¸ªå®žæ•°æ ¹ã€ä¸€ä¸ªå®žæ•°æ ¹ã€æ— å®žæ•°è§£ä¸‰ç§æƒ…å†µã€‚*/
+int main()
 {
     double a,b,c;
     scanf("%lf %lf %lf",&a,&b,&c);
@@ -106,26 +106,26 @@
     x=b*b-4*a*c;
     if(a==0)
     {
-        printf("ÊäÈë´íÎó\n");
+        printf("è¾“å…¥é”™è¯¯\n");
     }  
     else if(x>0)
     {
-        printf("ÓÐÁ½¸ö¸ù\n");
+        printf("æœ‰ä¸¤ä¸ªæ ¹\n");
     }
     else if(x==0)
     {
-        printf("ÓÐÁ½¸öÏàÍ¬µÄ¸ù\n");
+        printf("æœ‰ä¸¤ä¸ªç›¸åŒçš„æ ¹\n");
     }
     else if(x<0)
     {
-        printf("ÎÞÊµÊý¸ù\n");
+        printf("æ— å®žæ•°æ ¹\n");
     }
     return 0;
-}*/
+}
 
 
-//ºï×ÓÍµÌÒÎÊÌâ
-/*int main()
+//çŒ´å­å·æ¡ƒé—®é¢˜
+int main()
 {
 	   int day,i;
 	   int sum=1;
@@ -139,10 +139,10 @@
 	   	printf("%d",sum);
 	
 	return 0;
-}*/
+}
 
-//ÊýÎ»Êý¡£¸ø¶¨Ò»¸öÕûÊýÐÍn£¨1<=n <= 2147483647£©£¬ÇëÄãÇó³öËüµÄÎ»Êý¡£
-/*int main()
+//æ•°ä½æ•°ã€‚ç»™å®šä¸€ä¸ªæ•´æ•°åž‹nï¼ˆ1<=n <= 2147483647ï¼‰ï¼Œè¯·ä½ æ±‚å‡ºå®ƒçš„ä½æ•°ã€‚
+int main()
 {
     int n;
     int i=1;
@@ -157,21 +157,21 @@
       printf("%d",i);
     }
     else
-    printf("ÊäÈëÖµ³¬³ö·¶Î§");
+    printf("è¾“å…¥å€¼è¶…å‡ºèŒƒå›´");
     return 0;
-}*/
+}
 
 
 #include <stdio.h>
-/*Ä³³ÇÊÐ×î¸ßµÄÂ¥Ö»ÓÐÒ»²¿µçÌÝ¡£¸ÃµçÌÝºÍÒ»°ãµçÌÝ²»Í¬µÄ
-ËüÊÇÒÀÕÕÊäÈëÂ¥²ãÊýµÄÏÈºó´ÎÐòÔËÐÐ¡£µçÌÝ×î³õÔÚ0²ã¡£ÔË
-ÐÐÍêÒ»¸öÊäÈëÐòÁÐºó¾ÍÍ£Ö¹ÔÚ¸ÃÂ¥²ã£¬²»·µ»Ø0²ã¡£±àÐ´³Ì
-Ðò¼ÆËãµçÌÝÔËÐÐÒ»¸öÐòÁÐµÄÊ±¼ä¡£Ã¿´Î¶¼¼ÙÉèµçÌÝÔÚ0²ã¿ª
-Ê¼£¬ÎÞÂÛÉÏÒ»´ÎÔËÐÐµ½¼¸²ã¡£µçÌÝÃ¿ÉÏ1²ãÐèÒª6Ãë¡£Ã¿ÏÂ1
-²ãÐèÒª4Ãë¡£ÈçÔÚÄ³²ãÍ£Áô£¬ÎÞÂÛÉÏÏÂÈË¶àÉÙ£¬¾ùÍ£Áô5Ãë¡£
-ÊäÈë£ºµÚÒ»¸öÊýNÖ¸Ê¾ºóÃæ½«ÓÐN¸öÂ¥²ãµÄÐòÁÐ£¬Â¥²ãµÄÖµ
-´óÓÚµÈÓÚ1£¬Ð¡ÓÚ100¡£N=0±íÊ¾½áÊøÊäÈë¡£
-Êä³ö£ºÃ¿¸öÐòÁÐµçÌÝÔËÐÐµÄÊ±¼ä¡£*/
+/*æŸåŸŽå¸‚æœ€é«˜çš„æ¥¼åªæœ‰ä¸€éƒ¨ç”µæ¢¯ã€‚è¯¥ç”µæ¢¯å’Œä¸€èˆ¬ç”µæ¢¯ä¸åŒçš„
+å®ƒæ˜¯ä¾ç…§è¾“å…¥æ¥¼å±‚æ•°çš„å…ˆåŽæ¬¡åºè¿è¡Œã€‚ç”µæ¢¯æœ€åˆåœ¨0å±‚ã€‚è¿
+è¡Œå®Œä¸€ä¸ªè¾“å…¥åºåˆ—åŽå°±åœæ­¢åœ¨è¯¥æ¥¼å±‚ï¼Œä¸è¿”å›ž0å±‚ã€‚ç¼–å†™ç¨‹
+åºè®¡ç®—ç”µæ¢¯è¿è¡Œä¸€ä¸ªåºåˆ—çš„æ—¶é—´ã€‚æ¯æ¬¡éƒ½å‡è®¾ç”µæ¢¯åœ¨0å±‚å¼€
+å§‹ï¼Œæ— è®ºä¸Šä¸€æ¬¡è¿è¡Œåˆ°å‡ å±‚ã€‚ç”µæ¢¯æ¯ä¸Š1å±‚éœ€è¦6ç§’ã€‚æ¯ä¸‹1
+å±‚éœ€è¦4ç§’ã€‚å¦‚åœ¨æŸå±‚åœç•™ï¼Œæ— è®ºä¸Šä¸‹äººå¤šå°‘ï¼Œå‡åœç•™5ç§’ã€‚
+è¾“å…¥ï¼šç¬¬ä¸€ä¸ªæ•°NæŒ‡ç¤ºåŽé¢å°†æœ‰Nä¸ªæ¥¼å±‚çš„åºåˆ—ï¼Œæ¥¼å±‚çš„å€¼
+å¤§äºŽç­‰äºŽ1ï¼Œå°äºŽ100ã€‚N=0è¡¨ç¤ºç»“æŸè¾“å…¥ã€‚
+è¾“å‡ºï¼šæ¯ä¸ªåºåˆ—ç”µæ¢¯è¿è¡Œçš„æ—¶é—´ã€‚*/
 int main()
 {
 	int current_floor;
