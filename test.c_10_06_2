@@ -1,0 +1,197 @@
+#define _CRT_SECURE_NO_WARNINGS 
+#include<stdio.h>
+//考核题复习2轮
+
+//int和char的关系
+int main()
+{
+    char char_zero='0';//把c初始化为字符0，ASCII码值为48
+    int  int_zero=48; //把c初始化为ASCII码值48，两者相同
+    printf("%d\n",char_zero);
+    if(char_zero==int_zero)
+    {
+       printf("ture");
+    }
+    else
+    printf("false");
+}
+
+
+//判断闰年
+int main()
+{
+    int n=0;
+    scanf("%d",&n);
+    if(n>=1997&&n<=2099)
+    {
+        if(n%4==0&&n%100!=0)
+        {
+            printf("是闰年");
+        }
+        else if(n%400==0)
+        {
+            printf("是闰年");
+        }
+        else
+        {
+            printf("不是闰年");
+        }
+    } 
+    else
+    {
+        printf("不在范围内");
+    }
+    return 0;
+}
+
+
+ //测试赋值运算符的返回值
+//结论：返回值是对对象的引用，即赋值号左边的值
+int main()
+{
+ 
+	int a=2;
+	int b=1;
+	a=b;
+	
+	if (a= 1)
+	{
+       printf("true\n");
+	}
+    else
+    {
+       printf("false\n"); 
+    }
+    return 0;
+ }
+
+
+//1、2、3、4四个数字，能组成多少个互不相同且无重复数字的三位数？请把他们printf出来。
+//1234的数字组合
+int main()
+{
+    int a,b,c;
+    int count=0;
+    for(a=1;a<5;a++)
+    {
+        for(b=1;b<5;b++)
+        {
+            for(c=1;c<5;c++)
+            {
+                if(a!=b&&a!=c&&b!=c)
+                {
+                    printf("%d%d%d\n",a,b,c);
+                    count++;
+                }
+            }
+        }
+    }
+    printf("%d",count);
+    return 0;
+}
+
+
+/*求一元二次方程：ax2+bx+c=0在实数域的根。输入三个实数a,b,c(float)的值，且a不等于0。
+  注意，方程可能有两个实数根、一个实数根、无实数解三种情况。*/
+int main()
+{
+    float a,b,c,x;
+    scanf("%f %f %f",&a,&b,&c);
+    x=b*b-4*a*c;
+    if(a=0)
+    {
+        printf("a不能等于0");
+    }
+    if(x>0)
+    {
+        printf("有2个不同的实数");
+    }
+    else if(x=0)
+    {
+        printf("有2个相同的实数");
+    }
+    else
+    {
+        printf("无实数");
+    }
+    return 0;
+}
+
+
+//猴子偷桃问题
+int main()
+{
+    int i,day;
+    int sum=1;
+    scanf("%d",&day);
+    for(i=1;i<day;i++)
+    {
+        sum=(sum+1)*2;
+    }
+    printf("%d",sum);
+    return 0;
+}
+
+
+//数位数。给定一个整数型n（1<=n <= 2147483647），请你求出它的位数。
+int main()
+{
+    int i=1;
+    int n;
+    scanf("%d",&n);
+    if(n>=1&&n<=2147483647)
+    {
+        while(n/10>0)
+        {
+            i++;
+            n=n/10;
+        }
+        printf("%d",i);
+    }
+    else
+    {
+        printf("不在范围内\n");
+    }
+    return 0;
+}
+
+
+/*某城市最高的楼只有一部电梯。该电梯和一般电梯不同的
+它是依照输入楼层数的先后次序运行。电梯最初在0层。运
+行完一个输入序列后就停止在该楼层，不返回0层。编写程
+序计算电梯运行一个序列的时间。每次都假设电梯在0层开
+始，无论上一次运行到几层。电梯每上1层需要6秒。每下1
+层需要4秒。如在某层停留，无论上下人多少，均停留5秒。
+输入：第一个数N指示后面将有N个楼层的序列，楼层的值
+大于等于1，小于100。N=0表示结束输入。
+输出：每个序列电梯运行的时间。*/
+int main()
+{
+    int c_floor=0;//当前层
+    int n_floor,diff;//下一层，差值
+    int sum=0;
+    scanf("%d",&n_floor);
+    while(n_floor!=0)
+    {
+        diff=n_floor-c_floor;
+        if(diff>0)
+        {
+            sum=sum+diff*6;
+        }
+        if(diff<0)
+        {
+            sum=sum+(-diff*6);
+        }
+        c_floor=n_floor;
+        sum=sum+5;
+        scanf("%d",&n_floor);
+    }
+    printf("%d",sum);
+    return 0;
+}
+
+
+
+
+
+
