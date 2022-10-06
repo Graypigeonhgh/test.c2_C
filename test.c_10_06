@@ -1,0 +1,87 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+//二维数组也是通过下标的方式来使用
+int main()
+{
+	int arr[3][4]={{1,2,3},{4,5,6}};//指3行4列
+	int i=0;//i为下标
+	for(i=0;i<3;i++)//先打印行O
+	{
+		int j=0;
+		for(j=0;j<4;j++)//再打印列
+		{
+			//printf("%d",arr[i][j]);
+			printf("&arr[%d][%d]=%p\n",i,j,&arr[i][j]);//说明二维数组的存储位置是连续的
+		}
+		printf("\n");
+	}
+}
+
+//递归问题——栈溢出
+int main()
+{
+	printf("hello\n");
+	main();
+	return 0;
+}
+
+//自定义一个函数，接受一个整型值，按照顺序打印它的每一位，如输入1234，则分别输出1 2 3 4
+void print(int n)
+{
+	if(n>9)
+	{
+		print(n/10);
+	}
+	printf("%d ",n%10);//1余1，12余2,123余3······
+}
+
+int main()
+{
+	int num=12345;
+	print(num);
+	return 0;
+}
+
+//链式访问：把一个函数的返回值作为另一个函数的参数
+int main()
+{
+	printf("%d",printf("%d",printf("%d",43)));//printf()的返回值为打印字符的个数
+}
+
+//调用函数（形参和实参的使用）
+//错误写法
+void swap1(int x,int y)
+{
+	int tmp=x;
+	x=y;
+	y=tmp;
+}
+
+int main()
+{
+	int a=10;
+	int b=20;
+	printf("a=%d,b=%d\n",a,b);
+	swap1(a,b);
+	printf("a=%d,b=%d",a,b);
+	return 0;
+}
+
+//正确写法
+void swap2(int*pa,int*pb)
+{
+	int tmp=0;
+	tmp=*pa;
+	*pa=*pb;
+	*pb=tmp;
+}
+
+int main()
+{
+	int a=10;
+	int b=20;
+	swap2(&a,&b);
+	printf("a=%d,b=%d\n",a,b);
+	return 0;
+}
+//原因当实参传给形参的时候，形参其实是实参的一份临时拷贝，对形参的修改是不会改变实参的
