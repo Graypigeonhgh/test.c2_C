@@ -1,0 +1,103 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+//判断是否为闰年
+/*int main()
+{
+	int n;
+	scanf("%d",&n);
+	if(n>=1997&&n<=2099)
+	{
+		if(n%4==0&&n%100!=0)
+		{
+			printf("是闰年");
+		}
+		else if(n%400==0)
+		{
+			printf("是闰年");
+		}
+		else
+		{
+			printf("不是闰年");
+		}
+
+	}
+	else
+	{
+		printf("不是闰年");
+	}
+	return 0;
+}*/
+
+
+//计算1的乘阶+2的乘阶+3的乘阶。。。+10的乘阶
+/*int main()
+{
+	int i=0;
+	int n=0;
+	int ret=1;
+	int sum=0;
+	for (n=1;n<=10;n++)
+	{
+		ret=1;//必须先把ret初始化，否则就会变成1+1*1*2+2*1*2*3....
+		for(i=1;i<=n;i++)
+		{
+			ret=ret*i;
+		}
+		sum=sum+ret;//sum不需要初始化
+	}
+	printf("sum=%d\n",sum);
+	return 0;
+}*/
+
+
+//在一个有序数组中查找具体的某个数字n
+/*int main()
+{
+	int arr[]={1,2,3,4,5,6,7,8,9,10};
+	int k=7;
+	int i=0;//i为下标
+	int sz=sizeof(arr)/sizeof(arr[0]);//计算数组中元素个数
+	for(i=0;i<sz;i++)
+	{
+		if(k==arr[i])
+		{
+			printf("找到了，下标是：%d\n",i);
+			break;
+		}
+	}
+	if(i==sz)//i已检索到最后一个数的后一位，未能匹配到。
+	{
+		printf("找不到\n");
+	}
+	return 0;
+}*/
+
+
+//把输入的3个数按顺序排列
+int main()
+{
+	int a=0;
+	int b=0;
+	int c=0;
+	scanf("%d,%d,%d",&a,&b,&c);//必须按格式输入1,2,3
+	if(a<b)
+	{
+		int tmp=a;
+		a=b;
+		b=tmp;
+	}
+	if(a<c)
+	{
+		int tmp=a;
+		a=b;
+		b=tmp;
+	}
+	if(b<c)
+	{
+		int tmp=b;
+		b=c;
+		c=tmp;
+	}
+	printf("%d %d %d\n",a,b,c);
+	return 0;
+}
