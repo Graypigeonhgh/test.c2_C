@@ -1,2 +1,2 @@
 # test.c2
-this is my personal idea
+this is my daily practice
