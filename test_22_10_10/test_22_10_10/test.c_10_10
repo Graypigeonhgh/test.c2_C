@@ -1,0 +1,29 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+
+#include<stdio.h>
+//打印九九乘法表
+int main()
+{
+	int i=0;//i为行数 ，j为列数，j《=i
+	for(i=1;i<=9;i++)
+	{
+		int j=1;//j每次都会被初始化为1
+		for(j=1;j<=i;j++)
+		{
+			printf("%d*%d=%-3d",i,j,i*j);
+			//3d表示两三位数，无数字用空格补上，并向右对齐。-3d表示向左对齐
+		}
+		printf("\n");
+	}
+	return 0;
+}
+
+
+//以十进制，八进制，十六进制打印十进制数100。
+int main()
+{
+	int a=100;
+	printf("dec=%d;octal=%o;hex=%x\n",a,a,a);
+	printf("dec=%d;octal=%#o;hex=%#x\n",a,a,a);
+	return 0;//八进制前缀是0，十六进制前缀是0x或0X。
+}

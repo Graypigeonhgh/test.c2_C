@@ -1,0 +1,5 @@
+﻿  test.c_10_10
+D:\Code\test_22_10_10\test_22_10_10\test.c_10_10(23,5): error C2084: 函数“int main(void)”已有主体
+D:\Code\test_22_10_10\test_22_10_10\test.c_10_10(5): message : 参见“main”的前一个定义
+D:\Code\test_22_10_10\test_22_10_10\test.c_10_10(28,11): error C2065: “d”: 未声明的标识符
+D:\Code\test_22_10_10\test_22_10_10\test.c_10_10(29,1): error C2143: 语法错误: 缺少“;”(在“}”的前面)
