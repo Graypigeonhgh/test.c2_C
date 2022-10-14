@@ -1,13 +1,13 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
-//×Ô´´º¯ÊıÇó×Ö·û¿é³¤¶È
-/*int my_strlen(char*str)
+//è‡ªåˆ›å‡½æ•°æ±‚å­—ç¬¦å—é•¿åº¦
+int my_strlen(char*str)
 {
 	int count=0;
-	while(*str!='\0')//½âÒıÓÃ²Ù×÷·û£¬µÚÒ»¸öÔªËØµØÖ·£¬*str=b
+	while(*str!='\0')//è§£å¼•ç”¨æ“ä½œç¬¦ï¼Œç¬¬ä¸€ä¸ªå…ƒç´ åœ°å€ï¼Œ*str=b
 	{
 		count++;
-		str++;//Ö¸ÕëÏòÓÒ±ßÔªËØÒÆ¶¯
+		str++;//æŒ‡é’ˆå‘å³è¾¹å…ƒç´ ç§»åŠ¨
 	}
 	return count;
 }
@@ -18,14 +18,14 @@ int main()
 	int len=my_strlen(arr);
 	printf("len=%d\n",len);
 	return 0;
-}*/
+}
 
 
-//ÓÃ¶ş·Ö²éÕÒ·¨²éÕÒÓĞĞòÊıÁĞÖĞµÄÊı£¨ÕÒµ½Ê±·µ»ØÏÂ±ê£¬ÕÒ²»µ½Ê±·µ»Ø-1£©
+//ç”¨äºŒåˆ†æŸ¥æ‰¾æ³•æŸ¥æ‰¾æœ‰åºæ•°åˆ—ä¸­çš„æ•°ï¼ˆæ‰¾åˆ°æ—¶è¿”å›ä¸‹æ ‡ï¼Œæ‰¾ä¸åˆ°æ—¶è¿”å›-1ï¼‰
 int binary_search(int arr[],int k,int sz)
 {
-	int left=0;//ÏÂ±ê
-	int right=sz-1;//ÏÂ±ê
+	int left=0;//ä¸‹æ ‡
+	int right=sz-1;//ä¸‹æ ‡
 	while(left<=right)
 	{
 		int mid=(left+right)/2;
@@ -54,14 +54,14 @@ int main()
 	int k;
 	scanf("%d",&k);
 	int sz=sizeof(arr)/sizeof(arr[0]);
-	int ret=binary_search(arr,k,sz);//´«¹ıÈ¥µÄÊÇÊ×ÔªËØµÄµØÖ·£¨arr£©
-	if(ret=-1)
+	int ret=binary_search(arr,k,sz);//ä¼ è¿‡å»çš„æ˜¯é¦–å…ƒç´ çš„åœ°å€ï¼ˆarrï¼‰
+	if(ret==-1)
 	{
-		printf("ÕÒ²»µ½Ö¸¶¨Êı×Ö\n");
+		printf("æ‰¾ä¸åˆ°æŒ‡å®šæ•°å­—\n");
 	}
 	else
 	{
-		printf("ÕÒµ½ÁË£¬ÏÂ±êÊÇ£º%d\n",ret);
+		printf("æ‰¾åˆ°äº†ï¼Œä¸‹æ ‡æ˜¯ï¼š%d\n",ret);
 	}
 	return 0;
 }
