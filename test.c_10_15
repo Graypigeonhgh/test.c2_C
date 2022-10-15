@@ -1,0 +1,61 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+#include<stdio.h>
+//冒泡排序函数排成升序
+
+void bubble_sort(int arr[],int sz)
+{
+	int i=0;
+	for(i=0;i<sz-1;i++)//10个元素有9趟排序，下标为8
+	{
+		int flag=1;//让本就排好序的数列免于参与循环，提高效率
+		int j=0;
+		for(j=0;j<sz-1-i;j++)//每一趟排序次数，可让循环及时停止
+		{
+			if(arr[j]>arr[j+1])
+			{
+				int tem=arr[j];
+				arr[j]=arr[j+1];
+				arr[j+1]=tem;
+				flag=0;
+			}
+		}
+		if(flag==1)
+		{
+			break;
+		}
+	}
+}
+
+int main()
+{
+	int arr[]={9,8,7,6,5,4,3,2,1,0};
+	int i=0;
+	int sz=sizeof(arr)/sizeof(arr[0]);//arr是数组，对数组传参时，实际上传递过去的是数组首元素的地址
+	bubble_sort(arr,sz);
+	for(i=0;i<sz;i++)
+	{
+		printf("%d",arr[i]);
+	}
+	return 0;
+}
+
+
+//二维数组的使用
+int main()
+{
+	int arr[3][4]={{1,2,3},{4,5}};
+	int i=0;
+	for(i=0;i<3;i++)
+	{
+		int j=0;
+		for(j=0;j<4;j++)
+		{
+			printf("%d",arr[i][j]);
+		  //printf("&arr[%d][%d]=%p\n",i,j,&arr[i][j]);
+		}
+		printf("\n");
+	}
+	return 0;
+}
+
+
