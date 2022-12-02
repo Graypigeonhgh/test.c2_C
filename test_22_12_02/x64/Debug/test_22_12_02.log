@@ -1,0 +1,4 @@
+﻿  test3.c_12_02.cpp
+D:\Code\test_22_12_02\test_22_12_02\test3.c_12_02.cpp(14,11): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+D:\Code\test_22_12_02\test_22_12_02\test3.c_12_02.cpp(28,11): warning C4244: “初始化”: 从“double”转换到“float”，可能丢失数据
+  test_22_12_02.vcxproj -> D:\Code\test_22_12_02\x64\Debug\test_22_12_02.exe
