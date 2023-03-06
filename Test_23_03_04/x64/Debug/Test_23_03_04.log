@@ -1,0 +1,8 @@
+﻿  PointerTest.cpp
+D:\Code\Test_23_03_04\Test_23_03_04\PointerTest.cpp(9,9): warning C4477: “printf”: 格式字符串“% d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Code\Test_23_03_04\Test_23_03_04\PointerTest.cpp(9,9): message : 请考虑在格式字符串中使用“%zd”
+D:\Code\Test_23_03_04\Test_23_03_04\PointerTest.cpp(10,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Code\Test_23_03_04\Test_23_03_04\PointerTest.cpp(10,9): message : 请考虑在格式字符串中使用“%zd”
+D:\Code\Test_23_03_04\Test_23_03_04\PointerTest.cpp(11,9): warning C4477: “printf”: 格式字符串“%d”需要类型“int”的参数，但可变参数 1 拥有了类型“size_t”
+D:\Code\Test_23_03_04\Test_23_03_04\PointerTest.cpp(11,9): message : 请考虑在格式字符串中使用“%zd”
+  Test_23_03_04.vcxproj -> D:\Code\Test_23_03_04\x64\Debug\Test_23_03_04.exe
